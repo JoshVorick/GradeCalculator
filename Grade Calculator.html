@@ -1,0 +1,53 @@
+<!--
+Thanks for using my grade calculator!
+
+How to use it:
+Right click on the file
+Choose "Open with"
+Choose your favourite Internet Browser (i.e. Firefox or Chrome)
+
+Thanks!
+-Josh Vorick
+-->
+<!DOCTPYE html>
+<font face="Helvetica Light" size="5">
+<head>
+	<title>
+		Grade Calculator
+	</title>
+	<h1>
+		Calculator
+	</h1>
+</head>
+
+<body>
+	<h3>How to Use: </h3>
+	<p>Enter the percent you got for each quarter and the grade you want for the semester. <br>Enter numbers ONLY. i.e. <b>93.86</b> or <b>85.6</b> NOT <b>B-</b> or <b>90%</b></p>
+	<form name="Galc">
+		<table>
+			<tr>
+				<td>First Quarter Grade: </td>
+				<td><input type="text" name="Q1"/></td>
+			</tr>
+			<tr>
+				<td>Second Quarter Grade: </td>
+				<td><input type="text" name="Q2"/></td>
+			</tr>
+			<tr>
+				<td>Desired Semester Grade: </td>
+				<td><input type="text" name="Sem"/></td>
+			</tr>
+			<tr>
+				<td></td><td> 
+					<INPUT TYPE="button" NAME="DoIt"  VALUE="  Calculate  " OnClick="Galc.Final.value = eval('(' + Galc.Sem.value + '-(0.4*(' + Galc.Q1.value + ' + ' + Galc.Q2.value + ')))/0.2').toFixed(2)">
+				</td>
+			</tr>
+			<tr>
+				<td>Lowest Final Grade: </td>
+				<td><input type="text" name="Final" readonly /></td>
+			</tr>
+		</table>
+	</form>
+	<h5>This calculator assumes each quarter is worth 40% of your final grade and the final exam is worth 20% of your final semester grade.</h5>
+</body>
+</font> 
